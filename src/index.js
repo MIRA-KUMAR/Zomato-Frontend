@@ -1,21 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ReactDOM from 'react-dom/client';
 
-import Auth from './Screens/Auth';
-import Dashboard from './Screens/Dashboard';
-import Homepage from './Screens/Homepage';
+import App from './app'; // function or class
 
-function App() {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/auth" element={<Auth />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/" element={<Homepage />} />
-            </Routes>
-        </BrowserRouter>
-    )
-}
-
-ReactDOM.render(<App />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+    <App />,
+);
