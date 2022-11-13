@@ -26,7 +26,6 @@ export default function Dashboard() {
         <div>
             <BubbleChart data={
                 {
-                    labels: ['Red', 'Orange', 'Blue'],
                     datasets: [
                         {
                             label: 'Restaurant data - delivery rating(y) vs dining rating(x)',
