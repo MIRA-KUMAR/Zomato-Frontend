@@ -29,7 +29,10 @@ export default function Dashboard() {
                     labels: ['Red', 'Orange', 'Blue'],
                     datasets: [
                         {
+                            label: 'Restaurant data - delivery rating(y) vs dining rating(x)',
                             data: data.map((doc) => ({
+                                name: doc.name,
+                                location: doc.location,
                                 x: doc.diningRating,
                                 y: doc.deliveryRating,
                                 r: doc.price,
